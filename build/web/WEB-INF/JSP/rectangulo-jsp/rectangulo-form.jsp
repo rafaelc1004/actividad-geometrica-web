@@ -30,12 +30,11 @@
             <div class="card-title col-7">
                 <h4 class="card-title text-center">Calculo Geometrico de Rectangulo</h4>
             </div>
-            <form method="post" action="Controlador" id="formulario">
+            <form  id="formulario" method="post" action="Controlador">
                 <div class="row justify-content-center" >
                     <div class="card col-6">
                         <div class="card-body">
                             <select class="form-select" aria-label="operacion" name="operacion" id="operacion">
-                                <option value="" selected >Operacion a Realizar</option>
                                 <option value="area">Calcular Area de Rectangulo</option>
                                 <option value="perimetro">Calcular Perimetro de Rectangulo</option>
                             </select>
@@ -51,46 +50,59 @@
                                 <input type="text" class="form-control" id="altura" name="altura" placeholder="Altura de Rectangulo" required>
                             </div>
                             <div class="d-grid gap-2">
-                                <button class="btn btn-primary center" type="submit" value="rectangulo" name="figura" >Rectangulo</button>
+                                <button type="submit" class="btn btn-primary center" value="rectangulo" name="figura" >Rectangulo</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </form>
         </div>
-        
+
         <script>
-            const formulario = document.getElementById("formulario");
             
-            const operacion = document.getElementById("operacion");
-            
-            const errorOperacion = decument.getElementById("errorOperacion");
-            
-            formulario.addEventListener("submit", (ev) =>{
+            function check(){
                 
-                valorOperacion = operacion.value;
                 
-                if(valorOperacion == ""){
-                    ev.preventDefault();
-                    errorNombres.innerText = "No ha seleccionado una operacion a realizar";
-                    operacion.className ="error form-select";
+                const formulario = document.getElementById("formulario");
+
+                const operacion = document.getElementById("operacion");
+
+                const errorOperacion = decument.getElementById("errorOperacion");
+                
+
+
+
+
+
+                formulario.addEventListener("submit", (ev) =>{
+                    
+                    valorOperacion = operacion.value;
+
+                    if(valorOperacion == "error" valorOperacion == null){
+                        ev.preventDefault();
+                        errorNombres.innerText = "No ha seleccionado una operacion a realizar";
+                        operacion.className ="error form-select";
+
+                    }
+
+                    if(valorOperacion != ""){
+                        errorOperacion.innerText = "";
+                        operacion.className ="error form-select";
+                        
+                    }
+                    
+                    
+
+                });
+
+                function onCleanStyle(inputName){
+                    if(inputName =="operacion"){
+                        errorOperacion.innerText="";
+                        operacion.className = "form-select";
+                    }
                 }
-                
-                if(valorOperacion != ""){
-                    errorOperacion.innerText = "";
-                    operacion.className ="error form-select";
-                 
-                }
-                
-            });
             
-            function onCleanStyle(inputName){
-                if(inputName =="operacion"){
-                    errorOperacion.innerText="";
-                    operacion.className = "form-select";
-                }
-            }
-            
+    }
             
         </script>
     </body>

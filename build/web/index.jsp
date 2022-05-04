@@ -63,7 +63,7 @@
 
                     <div class="card col-lg-4 col-md-5 col-sm-5 col-xs-5 col-5 between" >
                         <div class="card-body">
-                            <h5 class="card-title">Calculos de Area</h5>
+                            <h5 class="card-title">Calculos de Rectangulo</h5>
                             <p class="card-text alinear">- Calculo de area rectangulo<br>- Calculo Perimetro rectangulo</p>
                             <div class="d-grid gap-2">
                                 <button class="btn btn-primary center" type="submit" value="rectangulo" name="figura">Rectangulo</button>

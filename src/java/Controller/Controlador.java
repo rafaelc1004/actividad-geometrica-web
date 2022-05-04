@@ -21,7 +21,7 @@ public class Controlador extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        PrintWriter pw = response.getWriter();
+       
 
         String figura = request.getParameter("figura");
 
@@ -41,7 +41,9 @@ public class Controlador extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
         String operacionCadena = request.getParameter("operacion");
+        
         String figura = request.getParameter("figura");
         String baseCadena = request.getParameter("base");
         String alturaCadena = request.getParameter("altura");
@@ -96,12 +98,9 @@ public class Controlador extends HttpServlet {
 
     }
 
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
-    @Override
+    
+    
+    
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>

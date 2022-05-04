@@ -32,21 +32,20 @@
             <div class="card-title col-7">
                 <h4 class="card-title text-center">Calculo Geometrico de Circulo</h4>
             </div>
-            <form method="post" action="Controlador" id="formulario">
+            <form method="post" action="Controlador" id="formulario" name="formulario">
                 <div class="row justify-content-center" >
                     <div class="card col-6">
                         <div class="card-body">
-                            <select class="form-select" aria-label="operacion" name="operacion" id="operacion"  required onchange="onLimpiarEstilos('apellidoMaterno')">
-                                <option>Operacion a Realizar</option>
+                            <select class="form-select" aria-label="operacion" name="operacion" id="operacion">
                                 <option value="area">Calcular Area de Circulo</option>
                                 <option value="perimetro">Calcular Perimetro de Circulo</option>
-                                <opcion value="radio">Calcular Radio de Circulo</opcion>
+                                <option value="radio">Calcular Radio de Circulo</option>
                             </select>
                             <div id="errorOperacion" class="mensajeError"></div>
 
                             <div class="mb-3">
-                                <label for="base" class="form-label">Diametro de Rectangulo:</label>
-                                <input type="text" class="form-control" id="diametro" name="diametro" placeholder="ingrese diametro de rectangulo" required>
+                                <label for="base" class="form-label">Diametro de Circulo:</label>
+                                <input type="text" class="form-control" id="diametro" name="diametro" placeholder="Ingrese diametro de Circulo" required>
                             </div>
                             <div class="d-grid gap-2">
                                 <button class="btn btn-primary center" type="submit" value="circulo" name="figura" >Circulo</button>
